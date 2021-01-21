@@ -17,7 +17,9 @@
     "url": "https://github.com/L1v1on/code_projects/issues"
   },
   "homepage": "https://github.com/L1v1on/code_projects#readme",
-  "dependencies": {},
+  "dependencies": {
+    "prettier": "^2.2.1"
+  },
   "devDependencies": {
     "eslint": "^7.18.0"
   }
