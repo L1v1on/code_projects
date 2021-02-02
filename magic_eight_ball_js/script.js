@@ -1,7 +1,9 @@
 let userName = 'Jane';
 userName ? console.log(`Hello, ${userName}!`) : console.log('Hello!');
 let userQuestion = 'Will I be rich?';
-userName ? console.log(`${userName} asked...${userQuestion}`) : console.log(`${userQuestion}`);
+userName
+  ? console.log(`${userName} asked...${userQuestion}`)
+  : console.log(`${userQuestion}`);
 let randomNumber = Math.floor(Math.random() * 8); //Random number between 0 and 7
 let eightBall = '';
 switch (randomNumber) {
@@ -30,7 +32,7 @@ switch (randomNumber) {
     eightBall = 'Signs point to yes';
     break;
   default:
-      eightBall = 'No';
+    eightBall = 'No';
     break;
 }
 console.log(eightBall);
