@@ -9,7 +9,7 @@ function generateTarget(){
 //console.log(generateTarget());
 
 function compareGuesses(humanGuess, computerGuess, target){
-    if(humanGuess === target && computerGuess === target){
+    if(humanGuess === target && computerGuess === target || humanGuess === computerGuess){
         return true;
     }
     if(humanGuess === target){
@@ -18,5 +18,5 @@ function compareGuesses(humanGuess, computerGuess, target){
     if(computerGuess === target){
         return false;
     }
-    
+
 }
