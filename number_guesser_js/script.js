@@ -19,4 +19,19 @@ function compareGuesses(humanGuess, computerGuess, target){
         return false;
     }
 
+    let humanDiff = humanGuess - target;
+    let computerDiff = computerGuess - target;
+    // turn negative difference into positive
+    if(humanDiff < 0){
+        humanDiff = humanDiff*-1;
+    }
+    if(computerDiff < 0){
+        computerDiff = computerDiff*-1;
+    }
+
+    if(humanDiff > computerDiff){
+        return false;
+    }else{
+        return true;
+    }
 }
