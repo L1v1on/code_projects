@@ -35,3 +35,15 @@ function compareGuesses(humanGuess, computerGuess, target){
         return true;
     }
 }
+
+function updateScore(winner){
+    if(winner === 'human'){
+        humanScore ++;
+    }else{
+        computerScore ++;
+    }
+}
+
+function advanceRound(){
+    currentRoundNumber ++;
+}
