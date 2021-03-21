@@ -14,13 +14,13 @@ const menu = {
     return this._courses.desserts;
   },
   set appetizers(appetizer) {
-    this._courses.appetizers = appetizer;
+    this._courses.appetizers.push(appetizer);
   },
   set mains(main) {
-    this._courses.mains = main;
+    this._courses.mains.push(main);
   },
   set desserts(dessert) {
-    this._courses.desserts = dessert;
+    this._courses.desserts.push(dessert);
   },
   get courses() {
     return {
