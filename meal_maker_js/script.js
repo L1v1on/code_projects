@@ -29,6 +29,25 @@ const menu = {
       desserts: this._courses.desserts,
     };
   },
+  addDishToCourse(courseName, dishName, dishPrice){
+    let dish = {
+      name: dishName,
+      price: dishPrice
+    }
+    if(courseName === 'appetizer'){
+      this.appetizers = dish;
+    }else if(courseName === 'main'){
+      this.mains = dish;
+    }else if(courseName === 'dessert'){
+      this.desserts = dish;
+    }else{
+      console.log('Enter a appetizer, main, or dessert dish.');
+    }
+  },
+  getRandomDishFromCourse(courseName){
+    
+  }
 };
 
+//menu.addDishToCourse('appetizer', 'bread', 10.50);
 console.log(menu.courses);
