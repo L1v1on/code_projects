@@ -57,16 +57,28 @@ const menu = {
     }
     //console.log(dishes);
     let index = Math.floor(Math.random() * dishes.length);
+    //console.log(dishes[index]);
     return dishes[index];
   },
   generateRandomMeal(){
     let appetizer = this.getRandomDishFromCourse('appetizer');
     let main = this.getRandomDishFromCourse('main');
     let dessert = this.getRandomDishFromCourse('dessert');
-    let total = appetizer[1] + main[1] + dessert[1];
-    return `${appetizer}, ${main}, ${dessert}: ${total}`;
+    let total = appetizer.price + main.price + dessert.price;
+    //console.log(appetizer.price);
+    return `${appetizer.name}, ${main.name}, ${dessert.name}: ${total}`;
   }
 };
 
-menu.addDishToCourse('appetizer', 'bread', 10.50);
-console.log(menu.getRandomDishFromCourse('appetizer'));
+menu.addDishToCourse('appetizer', 'bread', 4.5);
+menu.addDishToCourse('appetizer', 'salad', 5.5);
+menu.addDishToCourse('appetizer', 'tea', 3.5);
+menu.addDishToCourse('main', 'pizza', 15.5);
+menu.addDishToCourse('main', 'steak', 20.5);
+menu.addDishToCourse('main', 'burger', 10.5);
+menu.addDishToCourse('dessert', 'cake', 9.5);
+menu.addDishToCourse('dessert', 'pie', 7.5);
+menu.addDishToCourse('dessert', 'cookie', 5.0);
+
+let meal = menu.generateRandomMeal();
+console.log(meal);
