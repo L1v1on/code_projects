@@ -45,9 +45,28 @@ const menu = {
     }
   },
   getRandomDishFromCourse(courseName){
-    
+    let dishes;
+    if (courseName === 'appetizer') {
+      dishes = this.appetizers;
+    } else if (courseName === 'main') {
+      dishes = this.mains;
+    } else if (courseName === 'dessert') {
+      dishes = this.desserts;
+    } else {
+      console.log('Enter a appetizer, main, or dessert dish.');
+    }
+    //console.log(dishes);
+    let index = Math.floor(Math.random() * dishes.length);
+    return dishes[index];
+  },
+  generateRandomMeal(){
+    let appetizer = this.getRandomDishFromCourse('appetizer');
+    let main = this.getRandomDishFromCourse('main');
+    let dessert = this.getRandomDishFromCourse('dessert');
+    let total = appetizer[1] + main[1] + dessert[1];
+    return `${appetizer}, ${main}, ${dessert}: ${total}`;
   }
 };
 
-//menu.addDishToCourse('appetizer', 'bread', 10.50);
-console.log(menu.courses);
+menu.addDishToCourse('appetizer', 'bread', 10.50);
+console.log(menu.getRandomDishFromCourse('appetizer'));
