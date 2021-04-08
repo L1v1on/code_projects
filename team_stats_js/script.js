@@ -33,4 +33,10 @@ const team = {
       opponentPoints: 15,
     },
   ],
+  get players(){
+    return this._players;
+  },
+  get games(){
+    return this._games;
+  },
 };
