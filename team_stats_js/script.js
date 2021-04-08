@@ -39,4 +39,14 @@ const team = {
   get games(){
     return this._games;
   },
+  addPlayer(firstName, lastName, age){
+    let player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age,
+    };
+    this._players.push(player);
+  }
 };
+//team.addPlayer('Ezra', 'Vance', 99);
+//console.log(team.players);
