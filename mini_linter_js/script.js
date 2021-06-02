@@ -5,6 +5,7 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually'];
 
-const storyWords = story.split(' ');
+let re = /[\s,"!.-]/; //reguler expression to split the string into just the words
+const storyWords = story.split(re).filter(word => word.length >=1); //remove the empty strings from split array
 console.log(storyWords);
 console.log(storyWords.length);
