@@ -9,3 +9,12 @@ let re = /[\s,"!.-]/; //reguler expression to split the string into just the wor
 const storyWords = story.split(re).filter(word => word.length >=1); //remove the empty strings from split array
 console.log(storyWords);
 console.log(storyWords.length);
+const betterWords = storyWords.filter(word => {
+  for(i = 0; i < unnecessaryWords.length; i++){
+    //if(unnecessaryWords[i] == word) return false;
+    if(word.includes(unnecessaryWords[i])) return false;
+  }
+  return true;
+});
+console.log(betterWords);
+console.log(betterWords.length);
