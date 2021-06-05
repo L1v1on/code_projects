@@ -5,21 +5,28 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually'];
 
+console.log(story);
+
 //strip out the unnecessary words from story
 let re = /[\s,"!.-]/; //reguler expression to split the string into just the words
 //using filter() makes join() unable to put the sentence back together properly
-const storyWords = story.split(re).filter((word) => word.length >= 1); //remove the empty strings from split array.
-console.log(storyWords);
-console.log(storyWords.length);
+const storyWords = story.split(' ');
+const wordCount = story.split(re).filter((word) => word.length >= 1).length; //remove the empty strings from split array.
+//console.log(storyWords);
+console.log(`\nNumber of words in the original story: ${wordCount}`);
+let deletedWords = 0
 const betterWords = storyWords.filter((word) => {
   for (i = 0; i < unnecessaryWords.length; i++) {
     //if(unnecessaryWords[i] == word) return false;
-    if (word.includes(unnecessaryWords[i])) return false;
+    if (word.includes(unnecessaryWords[i])){
+       deletedWords++;
+       return false;
+    }
   }
   return true;
 });
-console.log(betterWords);
-console.log(betterWords.length);
+//console.log(betterWords);
+//console.log(betterWords.length);
 
 //find # of overusedWords
 const count = {};
@@ -32,4 +39,19 @@ for(i = 0; i < betterWords.length; i++){
     if(betterWords[i].includes(overusedWords[j])) count[overusedWords[j]]++;
   }
 }
-console.log('number of overused words', count);
+console.log('Number of overused words:', count);
+
+//count # of sentences
+//console.log(storyImproved);
+let sentences = 0;
+betterWords.forEach(w => {
+  if (w.includes('.') || w.includes('!') || w.includes('?')) sentences++; 
+});
+console.log(`Number of sentences in story: ${sentences}\n`);
+
+//display improved story
+const improvedStory = betterWords.join(" ");
+const newWordCount = improvedStory.split(re).filter((word) => word.length >= 1).length;
+console.log(improvedStory);
+console.log(`\nNumber of words removed from old story: ${deletedWords}`);
+console.log(`Number of words in the improved story: ${newWordCount}`);
