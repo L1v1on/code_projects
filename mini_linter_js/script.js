@@ -5,16 +5,31 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually'];
 
+//strip out the unnecessary words from story
 let re = /[\s,"!.-]/; //reguler expression to split the string into just the words
-const storyWords = story.split(re).filter(word => word.length >=1); //remove the empty strings from split array
+//using filter() makes join() unable to put the sentence back together properly
+const storyWords = story.split(re).filter((word) => word.length >= 1); //remove the empty strings from split array.
 console.log(storyWords);
 console.log(storyWords.length);
-const betterWords = storyWords.filter(word => {
-  for(i = 0; i < unnecessaryWords.length; i++){
+const betterWords = storyWords.filter((word) => {
+  for (i = 0; i < unnecessaryWords.length; i++) {
     //if(unnecessaryWords[i] == word) return false;
-    if(word.includes(unnecessaryWords[i])) return false;
+    if (word.includes(unnecessaryWords[i])) return false;
   }
   return true;
 });
 console.log(betterWords);
 console.log(betterWords.length);
+
+//find # of overusedWords
+const count = {};
+overusedWords.forEach(w => {
+  count[w] = 0;  
+});
+//console.log(count);
+for(i = 0; i < betterWords.length; i++){
+  for(j = 0; j < overusedWords.length; j++){
+    if(betterWords[i].includes(overusedWords[j])) count[overusedWords[j]]++;
+  }
+}
+console.log('number of overused words', count);
