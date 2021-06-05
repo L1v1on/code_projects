@@ -53,5 +53,7 @@ console.log(`Number of sentences in story: ${sentences}\n`);
 const improvedStory = betterWords.join(" ");
 const newWordCount = improvedStory.split(re).filter((word) => word.length >= 1).length;
 console.log(improvedStory);
-console.log(`\nNumber of words removed from old story: ${deletedWords}`);
+console.log(
+  `\nNumber of unnecessary words removed from old story: ${deletedWords}`
+);
 console.log(`Number of words in the improved story: ${newWordCount}`);
