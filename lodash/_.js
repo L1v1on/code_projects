@@ -20,6 +20,9 @@ const _ = {
       return false;
     }
   },
+  words(string){
+    return string.split(' ');
+  }
 };
 
 
