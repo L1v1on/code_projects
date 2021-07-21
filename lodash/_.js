@@ -22,6 +22,15 @@ const _ = {
   },
   words(string){
     return string.split(' ');
+  },
+  pad(string, length){
+    if(string.length > length) return string;
+    let padCount = length - string.length;
+    let padStart = Math.floor(padCount/2);
+    let padEnd = length - (string.length + padStart);
+    let stringPadded = string.padStart(padStart+string.length);
+    stringPadded = stringPadded.padEnd(padEnd+stringPadded.length);
+    return stringPadded;
   }
 };
 
