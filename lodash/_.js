@@ -31,6 +31,11 @@ const _ = {
     let stringPadded = string.padStart(padStart+string.length);
     stringPadded = stringPadded.padEnd(padEnd+stringPadded.length);
     return stringPadded;
+  },
+  has(object, path){
+    let value = object[path];
+    if(typeof(value) == 'undefined') return false;
+    return true;
   }
 };
 
