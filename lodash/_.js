@@ -36,6 +36,14 @@ const _ = {
     let value = object[path];
     if(typeof(value) == 'undefined') return false;
     return true;
+  },
+  invert(object){
+    let invertObj = {};
+    for (const [key, value] of Object.entries(object)) {
+      //console.log(value + ' ' + key);
+      invertObj[value] = key;
+    }
+    return invertObj;
   }
 };
 
