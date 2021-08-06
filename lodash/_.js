@@ -52,6 +52,9 @@ const _ = {
       if(predicateReturnValue == true)return key;
     }
     return undefined;
+  },
+  drop(array, number=1){
+    return array.slice(number);
   }
 };
 
