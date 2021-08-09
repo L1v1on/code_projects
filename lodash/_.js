@@ -55,7 +55,12 @@ const _ = {
   },
   drop(array, number=1){
     return array.slice(number);
-  }
+  },
+  dropWhile(array, predicate){
+    let dropNumber = array.findIndex((element, index) => { return !predicate(element, index, array)});
+    let droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
+  },
 };
 
 
