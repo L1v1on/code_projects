@@ -67,6 +67,7 @@ const _ = {
       let chunk = array.slice(index, index+size);
       arrayChunks.push(chunk);
     }
+    console.log(arrayChunks);
     return arrayChunks;
   }
 };
