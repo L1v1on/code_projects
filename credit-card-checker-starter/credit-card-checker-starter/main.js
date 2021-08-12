@@ -24,11 +24,21 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+// Using Luhn algorithm
+function validateCred(array){
+    let numDigits = array.length;
+    let sum = array[numDigits - 1]; // Start with the check digit
+    let parity = (numDigits - 1) % 2; // See if number of digits without check digit is even(0) or odd(1)
+    for(let i = 0; i < numDigits - 1; i++){
+        let digit = array[i];
+        if((i+1) % 2 == parity) digit = digit*2; // Based on non-indexed position number
+        if(digit > 9) digit = digit - 9;
+        sum = sum + digit;
+    };
+    console.log(sum);
+    if(sum % 10 == 0) return true;
+    return false;
+};
 
-
-
-
-
-
-
-
+console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
+//console.log(validateCred(invalid5));
