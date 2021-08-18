@@ -51,10 +51,26 @@ function findInvalidCards(nestedArray){
 }
 
 function idInvalidCardCompanies(nestedArray){
-    
+    companies = [];
+    nestedArray.forEach(array => {
+        digit = array[0];
+        if(digit == 3 && !companies.includes('Amex')){
+            companies.push('Amex');
+        } else if (digit == 4 && !companies.includes('Visa')) {
+          companies.push('Visa');
+        } else if (digit == 5 && !companies.includes('Mastercard')) {
+          companies.push('Mastercard');
+        } else if (digit == 6 && !companies.includes('Discover')) {
+          companies.push('Discover');
+        } else {
+            console.log('Company not found!!!');
+        }
+    });
+    console.log('Companies that mailed invalid cards:');
+    return companies;
 }
 
 //console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
 //console.log(validateCred(invalid5));
-console.log(findInvalidCards(batch));
-console.log(idInvalidCardCompanies(findInvalidCards(bath)));
+//console.log(findInvalidCards(batch));
+console.log(idInvalidCardCompanies(findInvalidCards(batch)));
