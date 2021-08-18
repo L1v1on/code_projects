@@ -1,3 +1,5 @@
+const { find } = require("lodash")
+
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
 const valid2 = [5, 5, 3, 5, 7, 6, 6, 7, 6, 8, 7, 5, 1, 4, 3, 9]
@@ -35,10 +37,24 @@ function validateCred(array){
         if(digit > 9) digit = digit - 9;
         sum = sum + digit;
     };
-    console.log(sum);
+    //console.log(sum);
     if(sum % 10 == 0) return true;
     return false;
-};
+}
 
-console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
+function findInvalidCards(nestedArray){
+    invalidCards = [];
+    nestedArray.forEach(array => {
+        if(!validateCred(array)) invalidCards.push(array);        
+    });
+    return invalidCards;
+}
+
+function idInvalidCardCompanies(nestedArray){
+    
+}
+
+//console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
 //console.log(validateCred(invalid5));
+console.log(findInvalidCards(batch));
+console.log(idInvalidCardCompanies(findInvalidCards(bath)));
