@@ -13,8 +13,13 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-
-
+// Factory funtion
+function pAequorFactory(num, dnaBase){
+  pAequor = {};
+  pAequor['specimenNum'] = num;
+  pAequor['dna'] = dnaBase;
+  return pAequor;
+}
 
 
 
