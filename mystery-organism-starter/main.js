@@ -15,13 +15,24 @@ const mockUpStrand = () => {
 
 // Factory funtion
 function pAequorFactory(num, dnaBase){
-  pAequor = {};
-  pAequor['specimenNum'] = num;
-  pAequor['dna'] = dnaBase;
+  let pAequor = {};
+  pAequor.specimenNum = num;
+  pAequor.dna = dnaBase;
+  pAequor.mutate = function () {
+    let randI = Math.floor(Math.random() * 15);
+    let randBase = returnRandBase();
+    if(this.dna[randI] == randBase){
+      do{
+        randBase = returnRandBase();
+      }while(this.dna[randI] == randBase)
+    }
+    this.dna[randI] = randBase;
+    return this.dna;
+  };
   return pAequor;
 }
 
-
-
-
-
+let testDNA = pAequorFactory(1, mockUpStrand());
+console.log(testDNA);
+console.log('Activate mutation');
+console.log(testDNA.mutate());
