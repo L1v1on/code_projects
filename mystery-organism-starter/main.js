@@ -53,7 +53,7 @@ function pAequorFactory(num, dnaBase) {
   return pAequor;
 }
 
-let testDNA1 = pAequorFactory(1, mockUpStrand());
+/* let testDNA1 = pAequorFactory(1, mockUpStrand());
 let testDNA2 = pAequorFactory(2, mockUpStrand());
 testDNA1.compareDNA(testDNA2);
 console.log(
@@ -65,9 +65,22 @@ console.log(
   `Will specimen ${
     testDNA2.specimenNum
   } survive? ${testDNA2.willLikelySurvive()}`
-);
+); */
 /* console.log(testDNA);
 console.log('Activate mutation');
 console.log(testDNA.mutate()); 
 testDNA3 = pAequorFactory(3, ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G']);
 console.log(testDNA3.willLikelySurvive()); */
+let survivingSpeciment = [];
+let count = 1;
+while (survivingSpeciment.length < 30) {
+  let pAequor = pAequorFactory(count, mockUpStrand());
+  if (pAequor.willLikelySurvive()) survivingSpeciment.push(pAequor);
+  count++;
+}
+console.log('The 30 surviving pAequor specimens:');
+survivingSpeciment.forEach((specimen) => {
+  console.log(
+    `Specimen Number: ${specimen.specimenNum} \nDNA: ${specimen.dna} \n`
+  );
+});
