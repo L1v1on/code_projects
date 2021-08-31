@@ -31,7 +31,7 @@ function pAequorFactory(num, dnaBase) {
   };
   pAequor.compareDNA = function (pAequor) {
     let identical = 0;
-    for (x = 0; x < this.dna.length; x++) {
+    for (let x = 0; x < this.dna.length; x++) {
       if (this.dna[x] == pAequor.dna[x]) identical++;
     }
     let percent = ((identical / 15) * 100).toFixed(3);
