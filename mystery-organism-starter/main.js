@@ -40,6 +40,10 @@ function pAequorFactory(num, dnaBase) {
       `Specimen #${this.specimenNum} and specimen #${pAequor.specimenNum} have ${percent}% DNA in common!`
     );
   };
+  /*Instructions had 60% C or G bases, so one or the other.
+  P. aequor have a likelier chance of survival 
+  if their DNA is made up of at least 60% 'C' or 'G' bases.
+  */
   pAequor.willLikelySurvive = function () {
     let c = 0;
     let g = 0;
