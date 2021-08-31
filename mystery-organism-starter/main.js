@@ -29,10 +29,21 @@ function pAequorFactory(num, dnaBase){
     this.dna[randI] = randBase;
     return this.dna;
   };
+  pAequor.compareDNA = function (pAequor) {
+    let identical = 0;
+    for(x = 0; x < this.dna.length; x++){
+      if(this.dna[x] == pAequor.dna[x]) identical++;
+    }
+    let percent = ((identical / 15)  * 100).toFixed(3);
+
+    console.log(`Specimen #${this.specimenNum} and specimen #${pAequor.specimenNum} have ${percent}% DNA in common!`);
+  };
   return pAequor;
 }
 
-let testDNA = pAequorFactory(1, mockUpStrand());
-console.log(testDNA);
+let testDNA1 = pAequorFactory(1, mockUpStrand());
+let testDNA2 = pAequorFactory(2, mockUpStrand());
+testDNA1.compareDNA(testDNA2);
+/* console.log(testDNA);
 console.log('Activate mutation');
-console.log(testDNA.mutate());
+console.log(testDNA.mutate()); */
