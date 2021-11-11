@@ -1,0 +1,11 @@
+h1, h2, h3, p {
+    font-family: helvetica;
+}
+
+h1 {
+    background-image: url(./pattern.webp);
+    color: khaki;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+}
