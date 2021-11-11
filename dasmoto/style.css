@@ -9,3 +9,21 @@ h1 {
     font-weight: bold;
     font-size: 100px;
 }
+
+h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.brush h2 {
+    background-color: mediumspringgreen;
+}
+
+.frame h2 {
+    background-color: lightcoral;
+}
+
+.paint h2 {
+    background-color: skyblue;
+}
