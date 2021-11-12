@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+table, th, td {
+  color: chartreuse;
+  border: 1px solid darkgoldenrod;
+}
+
+table {
+  margin: auto;
+}
+
+.title, .subTitle {
+  text-align: center;
+  color: chartreuse;
+}
