@@ -15,3 +15,8 @@ h1, .subTitle {
   text-align: center;
   color: chartreuse;
 }
+
+.code {
+  font-family: "Lucida Console", Courier, monospace;
+  background-color: darkgoldenrod;
+}
