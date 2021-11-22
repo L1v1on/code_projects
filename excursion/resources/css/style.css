@@ -2,8 +2,11 @@ body {
     background-color: black;
 }
 
-h1, h2, p, .link {
+h1, h2, p, .link, footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, p, .link{
     text-align: center;
 }
 
@@ -24,6 +27,10 @@ h2 {
 p {
     font-size: 21px;
     color: gray;
+}
+
+footer p {
+    text-align: right;
 }
 
 .link {
