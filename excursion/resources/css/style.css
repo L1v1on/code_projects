@@ -1,13 +1,10 @@
 body {
     background-color: black;
+    text-align: center;
 }
 
 h1, h2, p, .link, footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h1, h2, p, .link{
-    text-align: center;
 }
 
 h1, h2 {
