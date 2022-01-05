@@ -101,6 +101,8 @@ footer p {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   display: inline-block;
+  width: 200px;
+  height: 200px;
 }
 
 .supporting img {
