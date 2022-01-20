@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Orelega+One&display=swap');
+
 div.colors {
     border: 2px solid #1d425f;
     margin-bottom: 10px;
@@ -56,4 +58,16 @@ div.fonts {
     margin: 5px;
     text-align: center;
     display: inline-block;
+}
+
+h1, h2, .orelega{
+    font-family: 'Orelega One', cursive;
+}
+
+p, .bitter {
+    font-family: 'Bitter', serif;
+}
+
+li, .eb {
+    font-family: 'EB Garamond', serif;
 }
