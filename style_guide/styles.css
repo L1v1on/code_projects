@@ -1,5 +1,16 @@
 div.colors {
     border: 2px solid #1d425f;
+    margin-bottom: 10px;
+}
+
+div.styles {
+    border: 2px solid #1d425f;
+    margin-bottom: 10px;
+}
+
+div.fonts {
+    border: 2px solid #1d425f;
+    margin-bottom: 10px;
 }
 
 .color1 {
