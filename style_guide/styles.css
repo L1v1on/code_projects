@@ -3,6 +3,7 @@
 div.colors {
     border: 2px solid #1d425f;
     margin-bottom: 10px;
+    color: rgb(0, 0, 0);
 }
 
 div.styles {
@@ -70,4 +71,24 @@ p, .bitter {
 
 li, .eb {
     font-family: 'EB Garamond', serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 750;
+    font-size: 26px;
+}
+
+li {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
 }
