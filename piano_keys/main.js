@@ -86,6 +86,7 @@ nextThree.addEventListener('click', function(){
   document.getElementById('letter-note-four').innerHTML = 'C';
   document.getElementById('letter-note-five').innerHTML = 'D';
   document.getElementById('letter-note-six').innerHTML = 'C';
+  lastLyric.style.display = 'none';
 });
 // This is the event handler property and function for the startOver button
 startOver.onclick = function () {
