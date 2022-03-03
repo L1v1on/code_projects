@@ -2,3 +2,7 @@ a {
     color:darkorange;
     cursor: pointer;
 }
+
+.nav-link:hover{
+    color:darkorange;
+}
