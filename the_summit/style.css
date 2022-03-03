@@ -21,3 +21,7 @@ a {
 btn:active {
   background-color: rgb(0, 0, 255);
 }
+
+.activity {
+  border-radius: 10px;
+}
