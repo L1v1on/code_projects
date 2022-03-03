@@ -6,3 +6,10 @@ a {
 .nav-link:hover{
     color:darkorange;
 }
+
+.btn{
+    font-family: 'Raleway', sans-serif;
+    background-color: #2176FF;
+    padding: 10px;
+    border-radius: 5px;
+}
