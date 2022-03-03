@@ -29,3 +29,7 @@ btn:active {
 .activity:hover {
   background-color: rgb(0, 0, 255);
 }
+
+.activity:active {
+  background-color: rgb(50, 50, 255);
+}
