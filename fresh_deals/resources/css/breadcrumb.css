@@ -5,3 +5,14 @@
 .breadcrumb li+li.location::before{
     content: ">";
 }
+
+.breadcrumb li.attribute a {
+  color: green;
+}
+
+.breadcrumb li.attribute::after{
+    content: "x";
+    color: red;
+    vertical-align: super;
+    font-size:  10px;
+}
