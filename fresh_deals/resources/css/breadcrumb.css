@@ -2,6 +2,6 @@
     display: inline;
 }
 
-.breadcrumb li+li::before{
+.breadcrumb li+li.location::before{
     content: ">";
 }
