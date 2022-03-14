@@ -37,6 +37,7 @@ h2 {
 /* To Do Section */
 .week {
   display: inline-flex;
+  flex-grow: 3;
 }
 
 .row {
@@ -71,6 +72,7 @@ h2 {
 .reminders {
   background-color: khaki;
   display: inline-flex;
+  flex-grow: 2;
 }
 
 .reminders h3 {
