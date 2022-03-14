@@ -31,10 +31,12 @@ h2 {
 /* App Container */
 .container {
   border: 2px solid snow;
+  display: flex;
 }
 
 /* To Do Section */
 .week {
+  display: inline-flex;
 }
 
 .row {
@@ -46,6 +48,7 @@ h2 {
   width: 125px;
   height: 125px;
   padding: 10px;
+  display: flex;
 }
 
 .day.square {
@@ -67,6 +70,7 @@ h2 {
 /* Reminders */
 .reminders {
   background-color: khaki;
+  display: inline-flex;
 }
 
 .reminders h3 {
