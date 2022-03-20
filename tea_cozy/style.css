@@ -39,6 +39,7 @@ body {
     margin-right: 50px;
     background-image: url(./resources/imgs/img-mission-background.webp);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mission-text {
