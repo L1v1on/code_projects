@@ -13,6 +13,7 @@ Listed below are the technologies I have used in the courses so far.
 - Javascript
 - HTML
 - CSS
+- Java
 
 ## Utilities/Tools
 - VSCode
