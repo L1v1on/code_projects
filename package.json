@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/L1v1on/code_projects#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
-    "prettier": "^2.2.1"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "eslint": "^7.18.0"
+    "eslint": "^7.18.0",
+    "prettier": "^2.2.1"
   }
 }
