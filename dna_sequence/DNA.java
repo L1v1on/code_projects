@@ -10,9 +10,9 @@ package dna_sequence;
  */
 
 public class DNA {
-    final private String dnaStrand1 = "ATGCGATACGCTTGA";
-    final private String dnaStrand2 = "ATGCGATACGTGA";
-    final private String dnaStrand3 = "ATTAATATGTACTGA";
+     final private static String dnaStrand1 = "ATGCGATACGCTTGA";
+     final private static String dnaStrand2 = "ATGCGATACGTGA";
+     final private static String dnaStrand3 = "ATTAATATGTACTGA";
     public static void main(String[] args) {
 
         // -. .-. .-. .-. .
@@ -20,6 +20,8 @@ public class DNA {
         // / \ \ / \ \
         // ~ `-~ `-` `-~ `-
 
+        String dna = dnaStrand1; // hold reference to any strand
+        System.out.println(dna.length());
     }
 
 }
