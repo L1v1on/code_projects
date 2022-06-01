@@ -10,7 +10,9 @@ package dna_sequence;
  */
 
 public class DNA {
-
+    final private String dnaStrand1 = "ATGCGATACGCTTGA";
+    final private String dnaStrand2 = "ATGCGATACGTGA";
+    final private String dnaStrand3 = "ATTAATATGTACTGA";
     public static void main(String[] args) {
 
         // -. .-. .-. .-. .
